@@ -1,13 +1,13 @@
 <div class="modal">
   <div class="modal-conte">
-    <div ng-show='$ctrl.modal.type === "video"'>
+    <div ng-if='$ctrl.modal.type === "video"'>
       <div class="video">
         <div>
           <iframe src="https://www.youtube.com/embed/nHjOdiMuWiY?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1&amp;showinfo=0" frameborder="0"></iframe>
         </div>
       </div>
     </div>
-    <div ng-show='$ctrl.modal.type === "contacto"'>
+    <div ng-if='$ctrl.modal.type === "contacto"'>
       <form action="" class="formulario">
         <input type="text" placeholder="nombre">
         <input type="text" placeholder="correo">
