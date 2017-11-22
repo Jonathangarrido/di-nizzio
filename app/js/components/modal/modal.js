@@ -25,6 +25,8 @@ function Modal(){
   function cerrar(){
     $('mi-modal').fadeOut('fast')
     $('body,html').css('overflow','scroll')
+
+    service.type = '';
   }
 
 }
