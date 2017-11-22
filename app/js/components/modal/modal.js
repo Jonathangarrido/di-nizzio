@@ -23,10 +23,11 @@ function Modal(){
   }
 
   function cerrar(){
-    $('mi-modal').fadeOut('fast')
+    $('mi-modal').fadeOut('fast',function(){
+      service.type = '';
+    })
     $('body,html').css('overflow','scroll')
-
-    service.type = '';
+    
   }
 
 }
