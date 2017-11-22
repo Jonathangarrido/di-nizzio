@@ -1,0 +1,357 @@
+$altura-nav: 4rem;
+$altura-nav-lg: 6rem;
+$altura-footer: 3rem;
+$altura-footer-lg: 3rem;
+$btn-play : 4rem;
+$btn-play-lg : 7rem;
+
+.contenido{
+  padding-bottom: $altura-footer;
+}
+
+.centrador{
+  align-items: flex-end;
+  display: flex;
+  max-width: 1920px;
+  padding: 0 1rem;
+  width: 100%;
+}
+.nav{
+  align-items: flex-end;
+  background: black;
+  display: flex;
+  height: $altura-nav;
+  justify-content: center;
+  position: relative;
+  &>div{
+    justify-content: space-between;
+    height: 100%;
+  }
+  &-logo{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 10;
+    img{
+      max-width: 4rem;
+    }
+  }
+  &-button{
+    cursor: pointer;
+    font-family: 'icomoon' !important;
+    &:before{
+      content: '\f0c9';
+      font-size: 1.4rem;
+    }
+    &.open{
+      &:before{
+        content: '\f00d';
+      }
+    }
+  }
+  nav{
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: bottom .3s ease-in-out;
+    &.open{
+      bottom: -215%;
+    }
+  }
+  & a{
+    padding: .2em 0;
+  }
+}
+@mixin backgroundCover($url){
+  background: url(#{$url}) center no-repeat / cover;
+}
+main{
+  position: relative;
+  z-index: 2;
+  &>section{
+    position: relative;
+  }
+}
+.home{
+  @include backgroundCover('../images/home-s.jpg');
+  align-items: center;
+  display: flex;
+  height: 30rem;
+  justify-content: flex-end;
+  div{
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    text-align: right;
+  }
+  h1{
+    font-size: 4rem;
+    line-height: 1;
+    width: 19rem;
+    margin-bottom: .5em;
+  }
+  h2{
+    font-size: 2rem;
+    line-height: 1;
+    max-width: 5.2em;
+  }
+}
+.slider{
+  @include backgroundCover('../images/productos.jpg');
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem 2.5rem;
+  justify-content: flex-end;
+  &-titulo{
+    text-align: center;
+    width: 100%;
+    h1{
+      font-size: 2.5rem;
+      margin-bottom: 0.1em;
+      line-height: 1
+    }
+    p{
+      font-family: $altfont;
+      font-size: 2rem;
+    }
+  }
+  .bxslider{
+    padding: 0 4rem;
+
+    .h4{
+      margin-bottom: .5em;
+    }
+    p{
+      line-height: 1.2;
+      margin-bottom: 0;
+      &:last-child{
+        display: inline-block;
+        width: 8.9rem;
+      }
+    }
+  }
+  .bx-prev{
+    left: -2rem
+  }
+  .bx-next{
+    right: -2rem
+  }
+  &-info{
+    margin-top: -1rem;
+    text-align: center;
+  }
+
+  
+}
+.f-cen-cen{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.promocion{
+  background-color: #F4C74F;
+  padding: 5rem 0;
+  div{
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    height:$btn-play;
+    opacity: .7;
+    transition: all .3s ease-in-out;
+    width: $btn-play;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+.beneficios{
+  background-color: #a2abb0;
+  padding: 5rem 0;
+}
+.recetas{
+  background-color: #451701;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: center;
+  &-lista{
+    @extend .f-cen-cen;
+    max-width: 65rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+  }
+  a{
+    margin: .5rem;
+  }
+  &-item{
+    width: 8.6rem;
+    
+    p{
+      padding: .5rem;
+    }
+  }
+  h1{
+    font-size: 2rem;
+  }
+  
+}
+.footer{
+  align-items: center;
+  background-color: #A32328;
+  display: flex;
+  height: $altura-footer;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+  footer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  & i{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #A32328;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    height: 2rem;
+    justify-content: center;
+    width: 2rem;
+  }
+  & a{
+    &:not(:last-child){
+      margin-right: .5rem;
+    }
+  }
+}
+
+@include respond-to(m){
+  .home{
+    @include backgroundCover('../images/home.jpg');
+   
+    div{
+      padding-right: 3rem;
+    }
+    h1{
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to(l){
+  .contenido{
+    padding-bottom: $altura-footer-lg;
+  }
+  .nav{
+    height: $altura-nav-lg;
+    padding: .5rem 0;
+    &-button{
+      display: none;
+    }
+    &-logo{
+      max-width: 7rem;
+      img{
+        max-width: 7rem;
+      }
+    }
+    nav{
+      position: relative;
+      width: auto;
+      flex-direction: row;
+      transition: bottom 0s;
+      &.open{
+        bottom: 0%;
+      }
+    }
+    & a{
+      padding: 0;
+      &:not(:last-child){
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .home{
+    align-items: center;
+    display: flex;
+    height: calc(100vh - #{$altura-nav});
+    justify-content: flex-end;
+    
+    div{
+      padding-right: 5rem;
+    }
+    h1{
+      font-size: 4rem;
+    }
+    h2{
+      font-size: 2rem;
+      line-height: 1;
+      max-width: 5.2em;
+    }
+  }
+  .slider{
+    justify-content: flex-end;
+    padding: 2rem 1rem 4rem;
+    &-titulo{
+      text-align: right;
+      padding-right: 5rem;
+      h1{
+        font-size: 4rem;
+      }
+      p{
+        font-size: 3rem;
+      }
+    }
+    &-info{
+      margin-top: -1.8rem;
+    }
+  }
+  .promocion{
+    @include backgroundCover('../images/comercial.jpg');
+    padding: 0;
+    height: 80vh;
+    div{
+      height: $btn-play-lg;
+      width: $btn-play-lg;
+    }
+  }
+  .beneficios{
+    @include backgroundCover('../images/consejos.jpg');
+    padding: 0;
+    height: calc(100vh - #{$altura-footer});
+  }
+  .recetas{
+    padding: 5rem 0;
+    @include backgroundCover('../images/recetas.jpg');
+    &-item{
+      width: 11.8rem;
+
+    }
+    h1{
+      font-size: 4rem;
+    }
+  }
+
+  .footer{
+    footer{
+      justify-content: flex-end;
+    }
+  }
+}

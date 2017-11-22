@@ -1,0 +1,28 @@
+{
+  "name": "daily",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jonathan <jonathan.garrido1988@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angular-sanitize": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "jquery": "^3.0.0",
+    "angular-google-analytics": "^1.1.7",
+    "bxslider-4": "^4.2.5"
+  }
+}
