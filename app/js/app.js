@@ -46,7 +46,6 @@
       'miHome',
       'miReceta',
       'miModal',
-      'miFooter',
       'Modal',
       'apiService',
       'angular-google-analytics'

@@ -8,8 +8,8 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-    <meta name="theme-color" content="#E2231A">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Roboto+Condensed" rel="stylesheet">
+    <meta name="theme-color" content="#A32328">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Roboto+Condensed:400,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
     <meta>
   </head>
@@ -19,7 +19,9 @@
     <![endif]-->
     
     
-    
+    <div class="preload">
+      <div><img src="./images/logo-dinizzio.png" alt="logo"></div>
+    </div>
     <section class="contenido">
       
       <mi-menu></mi-menu>
@@ -27,7 +29,13 @@
       <main ng-view class="view"></main>
 
       
-      <mi-footer></mi-footer>
+      <div class="footer">
+        <div class="centrador">
+          <footer>
+            <a href="http://fb.com"><i class="icon-facebook"></i></a>
+            <a href="http://youtube.com"><i class="icon-youtube"></i></a>
+        </div>
+      </div>
     
 
     </section>
@@ -40,7 +48,6 @@
     <script src="./js/components/menu/mi-menu.js"></script>
     <script src="./js/components/home/mi-home.js"></script>
     <script src="./js/components/receta/mi-receta.js"></script>
-    <script src="./js/components/footer/footer.js"></script>
     <script src="./js/components/modal/modal.js"></script>
     <script src="./js/services/api-service.js"></script>
     <script src="./lib/jquery/dist/jquery.min.js"></script>

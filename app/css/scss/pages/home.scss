@@ -5,6 +5,26 @@ $altura-footer-lg: 3rem;
 $btn-play : 4rem;
 $btn-play-lg : 7rem;
 
+.preload{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  div{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    max-width: 10rem;
+    width: 100%;
+  }
+  
+}
+
 .contenido{
   padding-bottom: $altura-footer;
 }
@@ -73,7 +93,10 @@ $btn-play-lg : 7rem;
   }
 }
 @mixin backgroundCover($url){
-  background: url(#{$url}) center no-repeat / cover;
+  background-image: url(#{$url});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main{
   position: relative;
@@ -84,6 +107,7 @@ main{
 }
 .home{
   @include backgroundCover('../images/home-s.jpg');
+  background-color: #B46112;
   align-items: center;
   display: flex;
   height: 30rem;
@@ -108,7 +132,9 @@ main{
   }
 }
 .slider{
-  @include backgroundCover('../images/productos.jpg');
+  @include backgroundCover('../images/productos-s.jpg');
+  background-position: center bottom;
+  background-color: #F95A17;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -161,8 +187,9 @@ main{
   justify-content: center;
 }
 .promocion{
+  @include backgroundCover('../images/video-s.jpg');
   background-color: #F4C74F;
-  padding: 5rem 0;
+  height: 23rem;
   div{
     background: white;
     border-radius: 50%;
@@ -176,11 +203,13 @@ main{
     }
   }
 }
-.beneficios{
+.consejos{
+  @include backgroundCover('../images/consejos-s.jpg');
   background-color: #a2abb0;
   padding: 5rem 0;
 }
 .recetas{
+  @include backgroundCover('../images/recetas-s.jpg');
   background-color: #451701;
   flex-direction: column;
   padding: 2rem 1rem;
@@ -253,6 +282,24 @@ main{
     h1{
       width: 100%;
     }
+  }
+  .slider{
+    @include backgroundCover('../images/productos.jpg');
+
+
+  }
+  
+  .promocion{
+    @include backgroundCover('../images/comercial.jpg');
+    
+  }
+  .consejos{
+    @include backgroundCover('../images/consejos.jpg');
+    
+  }
+  .recetas{
+    @include backgroundCover('../images/recetas.jpg');
+    
   }
 }
 
@@ -332,7 +379,7 @@ main{
       width: $btn-play-lg;
     }
   }
-  .beneficios{
+  .consejos{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
     height: calc(100vh - #{$altura-footer});

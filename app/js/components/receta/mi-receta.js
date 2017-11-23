@@ -30,7 +30,15 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     console.log(url)
 
     vm.receta = Consultas.get_id(url);
-    console.log('recetas',vm.receta)
+
+    
+    var str = vm.receta.preparacion;
+    var filtroPreparacion = str.split('--');
+    vm.receta.preparacion = filtroPreparacion;
+
+    var str2 = vm.receta.ingredientes;
+    var filtroIngredientes = str2.split('--');
+    vm.receta.ingredientes = filtroIngredientes;
   }
 
   // Analytics
