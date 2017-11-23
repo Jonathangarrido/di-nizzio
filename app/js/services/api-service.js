@@ -64,7 +64,7 @@
       var productos = [
         {
           id: 'spaghetti-putanesca',
-          imagen: 'spaghetti-putanesca.jpg',
+          imagen: 'spaguetti-putanesca.jpg',
           fondo: 'unnamed.jpg',
           titulo: 'Spaghetti Putanesca',
           ingredientes: ' 680 grs. de tomates frescos y maduros o 650 grs. de tomates enlatados-- Sal gruesa para cocinar la pasta y sazonar la salsa-- 2 dientes de ajos medianos pelados-- 1/2 taza de aceite de oliva-- 220 grs. de aceitunas negras amargas de Azapa en salmuera-- 3 anchoas en sal o 6 filetes de anchoas en aceite-- 4 cucharadas de alcaparras en vinagre-- 2 cucharadas de pasta de tomates-- Pimienta fresca-- 1/2 cucharadita de té de hojuelas de pimiento rojo-- 450 grs. de spaghetti, preferentemente importado de Italia',
