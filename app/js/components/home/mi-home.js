@@ -13,6 +13,7 @@ function miHomeCtrl(Consultas,Analytics,Modal) {
 
 
   function activate(){
+    window.scrollTo(0,0); 
     getSlider();
     getRecetas();
   }
@@ -45,7 +46,7 @@ function miHomeCtrl(Consultas,Analytics,Modal) {
       prevText:'',
       minSlides: bxMinMaxSlides,
       maxSlides: bxMinMaxSlides,
-      moveSlides: 3,
+      moveSlides: 1,
       slideWidth: 270
     });
   }

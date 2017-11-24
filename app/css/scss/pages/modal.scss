@@ -3,7 +3,7 @@ mi-modal{
   left: 0; 
   position: fixed;
   top: 0;
-  z-index: 999999;
+  z-index: 99999999;
 }
 .modal{
   align-items: center;
@@ -17,7 +17,18 @@ mi-modal{
     color: #000;
     position: relative;
   }
-  i{
+  .icon-check{
+    background-color: green;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+  }
+  .icon-close{
     color: #fff;
     cursor: pointer;
     font-size: 1.5rem;
@@ -33,6 +44,7 @@ mi-modal{
 
 .formulario{
   background: white;
+  border-radius: $radius;
   padding: 2rem 3rem;
   max-width: 30rem;
   width: 100%;
@@ -42,7 +54,7 @@ mi-modal{
     border-radius: 5px;
     box-shadow: none;
     margin-bottom: 1rem;
-    padding: .2em;
+    padding: .5em;
     width: 100%;
   }
   textarea{
@@ -52,6 +64,14 @@ mi-modal{
   }
   button{
     border: none;
+    background-color: #A32328;
+    color: #fff;
+    cursor: pointer;
+  }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
 }

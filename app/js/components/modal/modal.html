@@ -8,11 +8,12 @@
       </div>
     </div>
     <div ng-if='$ctrl.modal.type === "contacto"'>
-      <form action="" class="formulario">
-        <input type="text" placeholder="nombre">
-        <input type="text" placeholder="correo">
-        <textarea name="" id="" placeholder="comentario"></textarea>
+      <form ng-submit="$ctrl.submitForm()" class="formulario">
+        <input required type="text" placeholder="nombre" ng-model="$ctrl.user.nombre">
+        <input required type="text" placeholder="correo" ng-model="$ctrl.user.correo">
+        <textarea placeholder="comentario" ng-model="$ctrl.user.comentario"></textarea>
         <button type="submit">Enviar</button>
+        <span>{{$ctrl.mensaje}} <i ng-class="$ctrl.estado"></i></span>
       </form>
     </div>
     <i class="icon-close" ng-click="$ctrl.cerrar()"></i>

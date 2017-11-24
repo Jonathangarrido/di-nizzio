@@ -24,7 +24,7 @@
         // Use analytics.js instead of ga.js
         AnalyticsProvider.useAnalytics(true);
 
-        AnalyticsProvider.trackPrefix('DiNizzio');
+        AnalyticsProvider.trackPrefix('Di Nizzio');
 
         // change page event name
         AnalyticsProvider.setPageEvent('$stateChangeSuccess');

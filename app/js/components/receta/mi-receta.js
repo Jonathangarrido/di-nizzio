@@ -27,7 +27,6 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
   function getReceta(){
     var url2 = $location.path().split('/');
     var url = url2[2];
-    console.log(url)
 
     vm.receta = Consultas.get_id(url);
 

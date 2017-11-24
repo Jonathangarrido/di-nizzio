@@ -19,7 +19,8 @@
     color: #000;
     margin-top: -3rem;
     max-width: 800px;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 3rem;
+    position: relative;
     width: 100%;
     h1{
       font-size: 2rem;
@@ -33,6 +34,15 @@
         content: '·'
       }
     }
+  }
+  &-volver{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: red;
+    color: #fff;
+    padding: .3em;
+    border-radius: $radius;
   }
 }
 @include respond-to(m){
