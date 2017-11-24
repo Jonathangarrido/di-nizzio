@@ -10,7 +10,7 @@
     <div ng-if='$ctrl.modal.type === "contacto"'>
       <form ng-submit="$ctrl.submitForm()" class="formulario">
         <input required type="text" placeholder="nombre" ng-model="$ctrl.user.nombre">
-        <input required type="text" placeholder="correo" ng-model="$ctrl.user.correo">
+        <input required type="email" placeholder="correo" ng-model="$ctrl.user.correo">
         <textarea placeholder="comentario" ng-model="$ctrl.user.comentario"></textarea>
         <button type="submit">Enviar</button>
         <span>{{$ctrl.mensaje}} <i ng-class="$ctrl.estado"></i></span>
