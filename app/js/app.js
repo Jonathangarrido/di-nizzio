@@ -16,7 +16,7 @@
       });
 
       // initial configuration
-        AnalyticsProvider.setAccount('UA-40787317-3');
+        AnalyticsProvider.setAccount('UA-110198915-1');
 
         // track all routes/states (or not)
         AnalyticsProvider.trackPages(true);
