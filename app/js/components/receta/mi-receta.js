@@ -38,11 +38,8 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     var str2 = vm.receta.ingredientes;
     var filtroIngredientes = str2.split('--');
     vm.receta.ingredientes = filtroIngredientes;
-  }
 
-  // Analytics
-  function analytics(){
-    // Analytics.trackEvent('Producto: '+receta.producto,'Receta','Receta: '+receta.titulo);
+    Analytics.trackEvent('Receta','Receta: '+vm.receta.titulo);
   }
 
 }
