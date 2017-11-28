@@ -16,7 +16,7 @@
       });
 
       // initial configuration
-        AnalyticsProvider.setAccount('UA-110198915-1');
+        AnalyticsProvider.setAccount('UA-110161951-1');
 
         // track all routes/states (or not)
         AnalyticsProvider.trackPages(true);
@@ -37,10 +37,8 @@
   }
 
   angular
-    .module('dailyApp', [
+    .module('dinizzio', [
       'ngRoute',
-      'ngAnimate',
-      'ngResource',
       'ngSanitize',
       'miMenu',
       'miHome',

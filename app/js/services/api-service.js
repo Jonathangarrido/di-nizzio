@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  Consultas.$inject = ['$location', '$resource','$http'];
-  function Consultas($location,$resource,$http){
+  Consultas.$inject = ['$location','$http'];
+  function Consultas($location,$http){
 
     var service = {
       get_slider: get_slider,
@@ -122,8 +122,6 @@
   angular
     .module('apiService', [])
     .factory('Consultas', Consultas)
-    // .constant('BaseUrl', 'http://www.dailyfoods.cl/parachuparselosdedos/api');
-    // .constant('BaseUrl', 'http://localhost:8888/daily/app/api');
 
 
 })();
