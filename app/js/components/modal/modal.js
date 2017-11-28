@@ -16,7 +16,7 @@ function Modal(){
 
   function open(type){
     $('mi-modal').fadeIn('fast')
-    $('body,html').css('overflow','hidden')
+    $('body,html').css('overflow-y','hidden')
 
     service.type = type;
 
@@ -26,7 +26,7 @@ function Modal(){
     $('mi-modal').fadeOut('fast',function(){
       service.type = '';
     })
-    $('body,html').css('overflow','scroll')
+    $('body,html').css('overflow-y','scroll')
     
   }
 
