@@ -38,7 +38,7 @@ gulp.task('jshint', function() {
 gulp.task('css', function() {
   gulp.src('./app/css/scss/main.scss')
     // .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))// compact | compressed
+    .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))// compact | compressed
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     // .pipe(sourcemaps.write())
     .pipe(concat('./app.css'))
