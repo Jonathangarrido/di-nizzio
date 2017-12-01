@@ -1,7 +1,7 @@
 'use strict';
 
-miMenuCtrl.$inject = ['Modal','$scope', '$location'];
-function miMenuCtrl(Modal, $scope, $location) {
+miMenuCtrl.$inject = ['Modal','$scope', '$location','Analytics'];
+function miMenuCtrl(Modal, $scope, $location, Analytics) {
   var vm = this;
 
   angular.element(document).ready(function () {
@@ -17,6 +17,7 @@ function miMenuCtrl(Modal, $scope, $location) {
   vm.nav = function(id){
     if($('#'+id).length > 0){
       $("html, body").animate({ scrollTop: $('#'+id).offset().top }, 1000);
+      Analytics.trackEvent('/menu',id);
     }else{
       $location.path( "#!/#"+id );
     }
