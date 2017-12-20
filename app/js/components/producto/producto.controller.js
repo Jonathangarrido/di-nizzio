@@ -1,7 +1,7 @@
 'use strict';
 
-miRecetaCtrl.$inject = ['Consultas','$location','Analytics'];
-function miRecetaCtrl(Consultas,$location,Analytics) {
+miProductoCtrl.$inject = ['Consultas','$location','Analytics'];
+function miProductoCtrl(Consultas,$location,Analytics) {
   var vm = this;
   vm.receta = [];
 
@@ -14,17 +14,10 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
 
   function activate(){
     setTimeout(top, 400);
-    getReceta();
+    console.log('producto')
+    // getReceta();
     // setTimeout(top, 400);
     
-  }
-  function navSelect(){
-    $('nav a').hasClass('active', function(){
-      $(this).removeClass('active');
-      if($(this).find('[data-menu="recetas"]')){
-        $(this).addClass('active');
-      }
-    })
   }
   
    // TOP
@@ -32,7 +25,7 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     window.scrollTo(0,0); 
   }
 
-  function getReceta(){
+  function getProducto(){
     var url2 = $location.path().split('/');
     var url = url2[2];
 
@@ -47,7 +40,7 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     var filtroIngredientes = str2.split('--');
     vm.receta.ingredientes = filtroIngredientes;
 
-    Analytics.trackEvent('Receta','Receta: '+vm.receta.titulo);
+    Analytics.trackEvent('Producto','Producto: '+vm.receta.titulo);
   }
 
 }
@@ -55,9 +48,9 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
 
 
 
-angular.module('miReceta', [])
+angular.module('miProducto', [])
 
-  .component('miReceta',{
-    templateUrl: './js/components/receta/mi-receta.html',
-    controller: miRecetaCtrl
+  .component('miProducto',{
+    templateUrl: './js/components/producto/producto.html',
+    controller: miProductoCtrl
   });

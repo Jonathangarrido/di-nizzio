@@ -19,13 +19,14 @@ $btn-play-lg : 7rem;
     align-items: center;
   }
   img{
-    max-width: 10rem;
+    max-width: 20rem;
     width: 100%;
   }
   
 }
 
 .contenido{
+  padding-top: $altura-nav;
   padding-bottom: $altura-footer;
 }
 
@@ -36,13 +37,18 @@ $btn-play-lg : 7rem;
   padding: 0 1rem;
   width: 100%;
 }
+
 .nav{
   align-items: flex-end;
   background: black;
   display: flex;
   height: $altura-nav;
   justify-content: center;
-  position: relative;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
   &>div{
     justify-content: space-between;
     height: 100%;
@@ -88,9 +94,16 @@ $btn-play-lg : 7rem;
       bottom: -215%;
     }
   }
-  & a{
+  a{
     padding: .2em 0;
   }
+  .active{
+    color: #A32328;
+  }
+}
+
+.no-mobile{
+  display: none;
 }
 @mixin backgroundCover($url){
   background-image: url(#{$url});
@@ -108,9 +121,9 @@ main{
 .home{
   @include backgroundCover('../images/home-s.jpg');
   background-color: #B46112;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  height: 30rem;
+  height: 35rem;
   justify-content: flex-end;
   div{
     align-items: flex-end;
@@ -203,7 +216,7 @@ main{
     }
   }
 }
-.consejos{
+.actividades{
   @include backgroundCover('../images/consejos-s.jpg');
   background-color: #a2abb0;
   padding: 5rem 0;
@@ -231,6 +244,9 @@ main{
     
     p{
       padding: .5rem;
+    }
+    img{
+      border: solid 5px #cbbba4;
     }
   }
   h1{
@@ -275,12 +291,17 @@ main{
 @include respond-to(m){
   .home{
     @include backgroundCover('../images/home.jpg');
-   
+    height: 40rem;
+    background-position: 60% 0;
     div{
       padding-right: 3rem;
     }
     h1{
       width: 100%;
+      text-shadow: 0px 0px 15px #000;
+    }
+    h2{
+      text-shadow: 0px 0px 15px #000;
     }
   }
   .slider{
@@ -288,14 +309,12 @@ main{
 
 
   }
-  
   .promocion{
     @include backgroundCover('../images/comercial.jpg');
     
   }
-  .consejos{
+  .actividades{
     @include backgroundCover('../images/consejos.jpg');
-    
   }
   .recetas{
     @include backgroundCover('../images/recetas.jpg');
@@ -304,7 +323,11 @@ main{
 }
 
 @include respond-to(l){
+  .no-mobile{
+    display: block;
+  }
   .contenido{
+    padding-top: $altura-nav-lg;
     padding-bottom: $altura-footer-lg;
   }
   .nav{
@@ -329,9 +352,10 @@ main{
       }
     }
     & a{
+      font-size: 1.1rem;
       padding: 0;
       &:not(:last-child){
-        margin-right: 0.5rem;
+        margin-right: 1rem;
       }
     }
   }
@@ -340,9 +364,11 @@ main{
     display: flex;
     height: calc(100vh - #{$altura-nav});
     justify-content: flex-end;
-    
     div{
       padding-right: 5rem;
+    }
+    img{
+      max-width: 17rem;
     }
     h1{
       font-size: 4rem;
@@ -368,6 +394,9 @@ main{
     }
     &-info{
       margin-top: -1.8rem;
+      p{
+        font-size: 1.9rem;
+      }
     }
   }
   .promocion{
@@ -379,7 +408,7 @@ main{
       width: $btn-play-lg;
     }
   }
-  .consejos{
+  .actividades{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
     height: calc(100vh - #{$altura-footer});
@@ -395,10 +424,20 @@ main{
       font-size: 4rem;
     }
   }
-
   .footer{
     footer{
       justify-content: flex-end;
+    }
+  }
+}
+@media only screen and (min-width: 1100px){
+  .home{
+    background-position: center;
+    h1{
+      text-shadow: none;
+    }
+    h2{
+      text-shadow: none;
     }
   }
 }

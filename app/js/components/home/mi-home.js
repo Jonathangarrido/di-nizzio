@@ -49,6 +49,19 @@ function miHomeCtrl(Consultas,Analytics,Modal) {
       moveSlides: 1,
       slideWidth: 270
     });
+
+    $('.bxslider-videos').bxSlider({
+      mode: 'horizontal', //'horizontal', 'vertical', 'fade'
+      speed: 500, // speed animation
+      pager: false, // icon pager
+      auto: false,
+      pause: 4000, // speed transition
+      infiniteLoop: false, 
+      hideControlOnEnd: true,
+      controls: true, // icon arrow
+      nextText:'',
+      prevText:'',
+    });
   }
 
   //obtengo slider

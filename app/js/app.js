@@ -11,6 +11,9 @@
       .when('/receta/:id',{
         template: '<mi-receta></mi-receta>'
       })
+      .when('/producto/:id',{
+        template: '<mi-producto></mi-producto>'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -43,6 +46,7 @@
       'miMenu',
       'miHome',
       'miReceta',
+      'miProducto',
       'miModal',
       'Modal',
       'apiService',

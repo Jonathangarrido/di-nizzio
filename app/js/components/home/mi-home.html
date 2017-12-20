@@ -1,7 +1,8 @@
 <section class="home">
   <div>
+    <img ng-src="./images/logo-dinizzio-home.png" alt="Logo Di Nizzio" class="no-mobile">
     <h1>É Vera Pasta</h1>
-    <h2>la más rica, que no se pega ni se pasa, está hecha con 100% trigo Durum.</h2>
+    <h2 class="no-mobile">la más rica, que no se pega ni se pasa, está hecha con 100% trigo Durum.</h2>
   </div>
 </section>
 <section class="slider" id="productos">
@@ -11,16 +12,17 @@
   </div>
   <ul class="bxslider">
     <li ng-repeat="producto in $ctrl.slider">
-      <img ng-src="./images/productos/{{producto.imagen}}" alt="{{producto.titulo}}">
-      <div class="slider-info">
-        <p class="h4">{{producto.titulo}}</p>
-        <p>{{producto.tipo}}</p>
-        <p>{{producto.descripcion}}</p>
-      </div>
+      <a ng-href="#!/producto/{{producto.url}}">
+        <img ng-src="./images/productos/{{producto.imagen}}" alt="{{producto.titulo}}">
+        <div class="slider-info">
+          <p class="h4">{{producto.titulo}}</p>
+        </div>
+      </a>
     </li>
   </ul>
 </section>
 <section class="promocion f-cen-cen" id="comercial">
+    <h1>Comercial</h1>
   <div ng-click="$ctrl.modal()"><?xml version="1.0" encoding="iso-8859-1"?>
   <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
   <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -35,19 +37,26 @@
 </section>
 <section class="recetas f-cen-cen" id="recetas">
   <!-- <h1>Recetas con la  Vera Pasta!</h1> -->
+  <h1>Recetas</h1>
   <div class="recetas-lista">
     <a ng-repeat="receta in $ctrl.recetas" ng-href="#!/receta/{{receta.id}}" >
       <div class="recetas-item">
-        <img ng-src="./images/recetas/{{receta.imagen}}" alt="{{receta.titulo}}">
+        <img ng-src="./images/recetas/{{receta.imagen}}.jpg" alt="{{receta.titulo}}">
         <p>{{receta.titulo}}</p>
       </div>
     </a>
   </div>
 </section>
-<section class="consejos f-cen-cen" id="consejos">
-  <div class="video">
-    <div>
-      <iframe src="https://www.youtube.com/embed/nHjOdiMuWiY?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1&amp;showinfo=0" frameborder="0"></iframe>
-    </div>
-  </div>
+<section class="actividades f-cen-cen" id="actividades">
+  <h1>Actividades</h1>
+  <ul class="bxslider-videos">
+    <li>
+      <div class="video">
+        <div>
+          <iframe src="https://www.youtube.com/embed/qG_oSzf-UcA?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1&amp;showinfo=0" frameborder="0"></iframe> 
+        </div>
+      </div>
+    </li>
+  </ul>
+     
 </section>

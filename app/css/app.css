@@ -687,10 +687,11 @@ ul.bxslider {
         -ms-flex-align: center;
             align-items: center; }
   .preload img {
-    max-width: 10rem;
+    max-width: 20rem;
     width: 100%; }
 
 .contenido {
+  padding-top: 4rem;
   padding-bottom: 3rem; }
 
 .centrador {
@@ -721,7 +722,11 @@ ul.bxslider {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative; }
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3; }
   .nav > div {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -782,6 +787,11 @@ ul.bxslider {
       bottom: -215%; }
   .nav a {
     padding: .2em 0; }
+  .nav .active {
+    color: #A32328; }
+
+.no-mobile {
+  display: none; }
 
 main {
   position: relative;
@@ -795,15 +805,15 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #B46112;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 30rem;
+  height: 35rem;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -921,7 +931,7 @@ main {
     .promocion div:hover {
       opacity: .8; }
 
-.consejos {
+.actividades {
   background-image: url(../images/consejos-s.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -966,6 +976,8 @@ main {
     width: 8.6rem; }
     .recetas-item p {
       padding: .5rem; }
+    .recetas-item img {
+      border: solid 5px #cbbba4; }
   .recetas h1 {
     font-size: 2rem; }
 
@@ -1027,11 +1039,16 @@ main {
     background-image: url(../images/home.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    height: 40rem;
+    background-position: 60% 0; }
     .home div {
       padding-right: 3rem; }
     .home h1 {
-      width: 100%; }
+      width: 100%;
+      text-shadow: 0px 0px 15px #000; }
+    .home h2 {
+      text-shadow: 0px 0px 15px #000; }
   .slider {
     background-image: url(../images/productos.jpg);
     background-position: center;
@@ -1042,7 +1059,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
-  .consejos {
+  .actividades {
     background-image: url(../images/consejos.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1054,7 +1071,10 @@ main {
     background-size: cover; } }
 
 @media only screen and (min-width: 768px) {
+  .no-mobile {
+    display: block; }
   .contenido {
+    padding-top: 6rem;
     padding-bottom: 3rem; }
   .nav {
     height: 6rem;
@@ -1078,9 +1098,10 @@ main {
       .nav nav.open {
         bottom: 0%; }
     .nav a {
+      font-size: 1.1rem;
       padding: 0; }
       .nav a:not(:last-child) {
-        margin-right: 0.5rem; }
+        margin-right: 1rem; }
   .home {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -1098,6 +1119,8 @@ main {
             justify-content: flex-end; }
     .home div {
       padding-right: 5rem; }
+    .home img {
+      max-width: 17rem; }
     .home h1 {
       font-size: 4rem; }
     .home h2 {
@@ -1119,6 +1142,8 @@ main {
         font-size: 3rem; }
     .slider-info {
       margin-top: -1.8rem; }
+      .slider-info p {
+        font-size: 1.9rem; }
   .promocion {
     background-image: url(../images/comercial.jpg);
     background-position: center;
@@ -1129,7 +1154,7 @@ main {
     .promocion div {
       height: 7rem;
       width: 7rem; }
-  .consejos {
+  .actividades {
     background-image: url(../images/consejos.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1152,6 +1177,14 @@ main {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end; } }
+
+@media only screen and (min-width: 1100px) {
+  .home {
+    background-position: center; }
+    .home h1 {
+      text-shadow: none; }
+    .home h2 {
+      text-shadow: none; } }
 
 .receta {
   -webkit-box-align: center;
@@ -1197,7 +1230,7 @@ main {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
-    background-color: red;
+    background-color: #A32328;
     color: #fff;
     padding: .3em;
     -webkit-border-radius: 2px;
