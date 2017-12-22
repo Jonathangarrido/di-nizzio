@@ -15,16 +15,14 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
   function activate(){
     setTimeout(top, 400);
     getReceta();
-    // setTimeout(top, 400);
+    navSelect();
     
   }
   function navSelect(){
     $('nav a').hasClass('active', function(){
       $(this).removeClass('active');
-      if($(this).find('[data-menu="recetas"]')){
-        $(this).addClass('active');
-      }
     })
+    $('nav a[data-menu="recetas"]').addClass('active');
   }
   
    // TOP

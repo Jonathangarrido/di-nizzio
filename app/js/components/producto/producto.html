@@ -1,15 +1,60 @@
-<section class="receta">
-  <div class="receta-fondo" style="background-image:url('./images/recetas/{{$ctrl.receta.fondo}}')">
-  </div>
-  <div class="receta-info">
-    <a ng-href="#!/" class="receta-volver">Volver a recetas</a>
-    <h1>{{$ctrl.receta.titulo}}</h1>
-    <p><b>Ingredientes:</b></p>
-    <ul>
-      <li ng-repeat="ingrediente in $ctrl.receta.ingredientes">{{ingrediente}}</li>
-    </ul>
-    <br>
-    <p><b>Preparación</b></p>
-    <p ng-repeat="preparacion in $ctrl.receta.preparacion">{{preparacion}}</p>
+<section class="especifico">
+  <div class="especifico-info especifico-info-producto">
+    <div class="producto-imagen">
+      <img ng-src="./images/productos/{{$ctrl.producto.imagen}}" alt="{{$ctrl.producto.titulo}}">
+      <p>{{$ctrl.producto.datos.gramos}} grs.</p>
+    </div>
+    <div class="producto-descripcion">
+      <h1>{{$ctrl.producto.titulo}}</h1>
+      <p>{{$ctrl.producto.tipo}}, {{$ctrl.producto.descripcion}}</p>
+      <table class="producto-tabla">
+        <thead>
+          <p class="producto-tabla-head"><strong>INFORMACION NUTRICIONAL </strong></strong><br>
+            Porción {{$ctrl.producto.datos.porcion}} de paquete ({{$ctrl.producto.datos.porcionGramos}} g) · Porciones por envase: {{$ctrl.producto.datos.porcionEnvase}}</p>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>100 ml</td>
+            <td>1 Porción</td>
+          </tr>
+          <tr>
+            <td>Energía (kcal)</td>
+            <td>{{$ctrl.producto.datos.energia[0]}}</td>
+            <td>{{$ctrl.producto.datos.energia[1]}}</td>
+          </tr>
+          <tr>
+            <td>Proteínas (g)</td>
+            <td>{{$ctrl.producto.datos.proteinas[0]}}</td>
+            <td>{{$ctrl.producto.datos.proteinas[1]}}</td>
+          </tr>
+          <tr>
+            <td>Grasas Totales (g)</td>
+            <td>{{$ctrl.producto.datos.grasas[0]}}</td>
+            <td>{{$ctrl.producto.datos.grasas[1]}}</td>
+          </tr>
+          <tr>
+            <td>H. de Carb. disp. (g)</td>
+            <td>{{$ctrl.producto.datos.hidratos[0]}}</td>
+            <td>{{$ctrl.producto.datos.hidratos[1]}}</td>
+          </tr>
+          <tr>
+            <td>Azúcares Totales (g)</td>
+            <td>{{$ctrl.producto.datos.azucares[0]}}</td>
+            <td>{{$ctrl.producto.datos.azucares[1]}}</td>
+          </tr>
+          <tr>
+            <td>Sodio (mg)</td>
+            <td>{{$ctrl.producto.datos.sodio[0]}}</td>
+            <td>{{$ctrl.producto.datos.sodio[1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="producto-tabla-footer">(*) En relación a la DDR para un adulto en base a 2000 Kcal según Codex alimentarios FAO/OMS</p>
+    </div>
+    <div class="especifico-footer">
+      <a href="./images/fichas/{{$ctrl.producto.datos.ficha}}.pdf" target="_blank"class="producto-ficha">Descargar Ficha Técnica</a>
+      <a ng-href="#!/">Volver a productos</a>
+    </div>
   </div>
 </section>

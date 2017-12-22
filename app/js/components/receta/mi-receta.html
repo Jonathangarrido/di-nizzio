@@ -1,8 +1,8 @@
-<section class="receta">
-  <div class="receta-fondo" style="background-image:url('./images/recetas/{{$ctrl.receta.imagen}}-f.jpg')">
+<section class="especifico receta">
+  <div class="especifico-fondo" style="background-image:url('./images/recetas/{{$ctrl.receta.imagen}}-f.jpg')">
   </div>
-  <div class="receta-info">
-    <a ng-href="#!/" class="receta-volver">Volver a recetas</a>
+  <div class="especifico-info">
+    <a ng-href="#!/" class="especifico-volver">Volver a recetas</a>
     <h1>{{$ctrl.receta.titulo}}</h1>
     <p><b>Ingredientes:</b></p>
     <ul>
@@ -11,5 +11,8 @@
     <br>
     <p><b>Preparación</b></p>
     <p ng-repeat="preparacion in $ctrl.receta.preparacion">{{preparacion}}</p>
+    <div class="especifico-footer">
+      <a ng-href="#!/">Volver a recetas</a>
+    </div>
   </div>
 </section>

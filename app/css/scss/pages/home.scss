@@ -24,6 +24,11 @@ $btn-play-lg : 7rem;
   }
   
 }
+.main{
+  section{
+    position: relative;
+  }
+}
 
 .contenido{
   padding-top: $altura-nav;
@@ -104,6 +109,16 @@ $btn-play-lg : 7rem;
 
 .no-mobile{
   display: none;
+}
+.titulo{
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  max-width: 1920px;
+  font-size: 2.5rem;
+  &-left{
+    left: 2rem;
+  }
 }
 @mixin backgroundCover($url){
   background-image: url(#{$url});
@@ -235,6 +250,11 @@ main{
     justify-content: center;
     flex-wrap: wrap; 
     align-items: flex-start;
+    &>h1{
+      width: 100%;
+      text-align: right;
+      font-size: 2.5rem;
+    }
   }
   a{
     margin: .5rem;
@@ -248,9 +268,6 @@ main{
     img{
       border: solid 5px #cbbba4;
     }
-  }
-  h1{
-    font-size: 2rem;
   }
   
 }
@@ -325,6 +342,9 @@ main{
 @include respond-to(l){
   .no-mobile{
     display: block;
+  }
+  .titulo{
+    font-size: 4rem;
   }
   .contenido{
     padding-top: $altura-nav-lg;
