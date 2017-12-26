@@ -434,7 +434,7 @@ main{
     height: calc(100vh - #{$altura-footer});
   }
   .recetas{
-    padding: 5rem 0;
+    padding: 3rem 0 5rem;
     @include backgroundCover('../images/recetas.jpg');
     &-item{
       width: 11.8rem;
