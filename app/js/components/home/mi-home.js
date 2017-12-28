@@ -38,9 +38,7 @@ function miHomeCtrl(Consultas,Analytics,Modal) {
     });
 
     $('.bxslider-videos li').each(function(){
-
       var iframe = $(this).html();
-      console.log(iframe)
       var newifram = iframe.replace('iframeoculto','');
       $(this).find('.videosIframe').html(newifram)
       $(this).find('.videosIframe .videosIframe').fadeOut()

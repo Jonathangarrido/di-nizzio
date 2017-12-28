@@ -831,7 +831,7 @@ main {
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .home img {
-    max-width: 14rem;
+    max-width: 11rem;
     margin-bottom: 1rem; }
   .home div {
     -webkit-box-align: end;
@@ -1145,8 +1145,6 @@ main {
             justify-content: flex-end; }
     .home div {
       padding-right: 1rem; }
-    .home img {
-      max-width: 14rem; }
     .home h1 {
       font-size: 4rem; }
     .home h2 {
