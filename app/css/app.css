@@ -1184,8 +1184,8 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    min-height: -webkit-calc(100vh - 3rem);
-    min-height: calc(100vh - 3rem); }
+    min-height: -webkit-calc(100vh - 3rem - 6rem);
+    min-height: calc(100vh - 3rem - 6rem); }
   .recetas {
     padding: 3rem 0 5rem;
     background-image: url(../images/recetas.jpg);

@@ -446,7 +446,7 @@ main{
   .actividades{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
-    min-height: calc(100vh - #{$altura-footer});
+    min-height: calc(100vh - #{$altura-footer} - #{$altura-nav-lg});
   }
   .recetas{
     padding: 3rem 0 5rem;
