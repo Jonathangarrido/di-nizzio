@@ -825,7 +825,7 @@ main {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 35rem;
+  height: 31rem;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -950,6 +950,11 @@ main {
   background-size: cover;
   background-color: #a2abb0;
   padding: 5rem 0; }
+  .actividades .bx-viewport {
+    max-width: -webkit-calc(800px + 10rem) !important;
+    max-width: calc(800px + 10rem) !important;
+    height: 100% !important;
+    margin-top: 3rem; }
 
 .recetas {
   background-image: url(../images/recetas-s.jpg);
@@ -1259,7 +1264,7 @@ main {
       content: '·'; }
   .especifico-footer {
     position: relative;
-    max-width: 20rem;
+    width: 100%;
     text-align: right; }
     .especifico-footer a {
       display: inline-block;

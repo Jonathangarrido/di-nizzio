@@ -11,7 +11,7 @@
       <h1>Nuestros Productos</h1>
       <p>100% Trigo Durum</p>
     </div>
-    <ul class="bxslider">
+    <ul class="bxslider2">
       <li ng-repeat="producto in $ctrl.slider">
         <a ng-href="#!/producto/{{producto.url}}">
           <img ng-src="./images/productos/{{producto.imagen}}" alt="{{producto.titulo}}">
@@ -53,11 +53,20 @@
     <h1 class="titulo titulo-left">Actividades</h1>
     <ul class="bxslider-videos">
       <li>
+          <iframe src="https://www.youtube.com/embed/qG_oSzf-UcA?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;version=3&amp;enablejsapi=1&amp;showinfo=0" frameborder="0" class="iframeoculto"></iframe>
+          <div class="video">
+            <div class="videosIframe">
+            </div>
+          </div>
+
+      </li>
+      <li>
+        <iframe src="https://www.youtube.com/embed/qG_oSzf-UcA?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;version=3&amp;enablejsapi=1&amp;showinfo=0" frameborder="0" class="iframeoculto"></iframe>
         <div class="video">
-          <div>
-            <iframe src="https://www.youtube.com/embed/qG_oSzf-UcA?&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1&amp;showinfo=0" frameborder="0"></iframe> 
+          <div class="videosIframe">
           </div>
         </div>
+
       </li>
     </ul>
         
