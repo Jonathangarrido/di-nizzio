@@ -1297,12 +1297,13 @@ main {
   text-align: center;
   display: none; }
 
-.producto-descripcion h1 {
-  font-family: "Roboto Condensed", "PT Sans Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000; }
-
-.producto-descripcion span {
-  font-size: .9rem; }
+.producto-descripcion {
+  text-align: center; }
+  .producto-descripcion h1 {
+    font-family: "Roboto Condensed", "PT Sans Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000; }
+  .producto-descripcion span {
+    font-size: .9rem; }
 
 .producto-tabla {
   font-size: .8rem;
@@ -1316,9 +1317,11 @@ main {
   .producto-tabla-head {
     margin: 1rem auto .25rem;
     max-width: 18rem; }
-  .producto-tabla tr td:not(:first-child) {
-    text-align: center;
-    padding: 0 .2rem; }
+  .producto-tabla tr td {
+    text-align: left; }
+    .producto-tabla tr td:not(:first-child) {
+      text-align: center;
+      padding: 0 .2rem; }
   .producto-tabla tr:nth-child(1) td {
     border-top: 2px #A32328 solid;
     padding-bottom: .25rem; }
