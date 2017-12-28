@@ -43,7 +43,7 @@
           imagen: 'fusilli.png',
           titulo: 'Fusilli',
           tipo: 'Espirales',
-          descripcion: 'VersÃ¡tiles y aptos para toda preparación',
+          descripcion: 'Versátiles y aptos para toda preparación',
           datos: {
             porcion: '1/5',
             porcionGramos: 80,
