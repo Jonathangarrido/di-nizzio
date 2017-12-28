@@ -79,7 +79,6 @@ function miHomeCtrl(Consultas,Analytics,Modal) {
   }
 
   function videos(posicion){
-    console.log('function videos')
     if($('.actividades').length === 1){
       var atras = posicion + 1;
       var conteBefore = $('.bxslider-videos li:nth-child('+atras+')');

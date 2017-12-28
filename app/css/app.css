@@ -1186,6 +1186,12 @@ main {
     padding: 0;
     min-height: -webkit-calc(100vh - 3rem - 6rem);
     min-height: calc(100vh - 3rem - 6rem); }
+    .actividades .bx-wrapper {
+      margin-top: 3rem; }
+    .actividades .bx-prev {
+      left: 2rem; }
+    .actividades .bx-next {
+      right: 2rem; }
   .recetas {
     padding: 3rem 0 5rem;
     background-image: url(../images/recetas.jpg);
@@ -1217,7 +1223,11 @@ main {
   .actividades li {
     padding: 0; }
   .actividades .bx-controls-direction a {
-    width: 5rem; } }
+    width: 5rem; }
+  .actividades .bx-prev {
+    left: 7rem; }
+  .actividades .bx-next {
+    right: 7rem; } }
 
 .especifico {
   -webkit-box-align: center;

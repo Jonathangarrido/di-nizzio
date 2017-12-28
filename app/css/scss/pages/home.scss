@@ -447,6 +447,15 @@ main{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
     min-height: calc(100vh - #{$altura-footer} - #{$altura-nav-lg});
+    .bx-wrapper{
+      margin-top: 3rem;
+    }
+    .bx-prev{
+      left: 2rem;
+    }
+    .bx-next{
+      right: 2rem;
+    }
   }
   .recetas{
     padding: 3rem 0 5rem;
@@ -482,13 +491,24 @@ main{
     }
   }
   .actividades{
+    .bx-wrapper{
+      // max-width: 600px;
+    }
     li{
       padding: 0;
+      // max-width: 600px;
     }
+
     .bx-controls-direction{
       a{
         width: 5rem;
       }
+    }
+    .bx-prev{
+      left: 7rem;
+    }
+    .bx-next{
+      right: 7rem;
     }
   }
 }
