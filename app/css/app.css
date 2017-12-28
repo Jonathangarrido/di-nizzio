@@ -1063,7 +1063,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 40rem;
-    background-position-x: -300px; }
+    background-position-x: 70%; }
     .home div {
       padding-right: 3rem; }
     .home h1 {
