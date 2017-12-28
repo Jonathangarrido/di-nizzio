@@ -63,12 +63,16 @@
       font-size: 1.5rem;
       font-family: $altfont;
       text-align: center;
+      display: none;
     }
   }
   &-descripcion{
     h1{
       font-family: $basefont;
       color: #000;
+    }
+    span{
+      font-size: .9rem;
     }
   }
   &-tabla{
@@ -152,11 +156,19 @@
     }
   }
   .producto{
+    &-imagen{
+      p{
+        display: block;
+      }
+    }
     &-descripcion{
       padding-left: 2rem;
       h1,
       p{
         text-align: center;
+      }
+      span{
+        display: none;
       }
     }
     &-tabla{

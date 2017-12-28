@@ -1294,11 +1294,15 @@ main {
 .producto-imagen p {
   font-size: 1.5rem;
   font-family: "Dancing Script", "Helvetica Neue", Georgia, Times, "Times New Roman";
-  text-align: center; }
+  text-align: center;
+  display: none; }
 
 .producto-descripcion h1 {
   font-family: "Roboto Condensed", "PT Sans Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000; }
+
+.producto-descripcion span {
+  font-size: .9rem; }
 
 .producto-tabla {
   font-size: .8rem;
@@ -1357,11 +1361,15 @@ main {
       position: absolute;
       right: 1.8rem;
       bottom: 1rem; }
+  .producto-imagen p {
+    display: block; }
   .producto-descripcion {
     padding-left: 2rem; }
     .producto-descripcion h1,
     .producto-descripcion p {
       text-align: center; }
+    .producto-descripcion span {
+      display: none; }
   .producto-tabla-head {
     text-align: left; } }
 
