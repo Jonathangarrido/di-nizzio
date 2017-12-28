@@ -830,6 +830,9 @@ main {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  .home img {
+    max-width: 14rem;
+    margin-bottom: 1rem; }
   .home div {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
@@ -1063,11 +1066,10 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 40rem;
-    background-position-x: 70%; }
+    background-position-x: 58%; }
     .home div {
       padding-right: 3rem; }
     .home h1 {
-      width: 100%;
       text-shadow: 0px 0px 15px #000; }
     .home h2 {
       text-shadow: 0px 0px 15px #000; }
@@ -1144,7 +1146,7 @@ main {
     .home div {
       padding-right: 1rem; }
     .home img {
-      max-width: 17rem; }
+      max-width: 14rem; }
     .home h1 {
       font-size: 4rem; }
     .home h2 {
@@ -1208,9 +1210,12 @@ main {
     .home div {
       padding-right: 5rem; }
     .home h1 {
+      width: 100%;
       text-shadow: none; }
     .home h2 {
       text-shadow: none; }
+    .home img {
+      max-width: 17rem; }
   .actividades li {
     padding: 0; }
   .actividades .bx-controls-direction a {
