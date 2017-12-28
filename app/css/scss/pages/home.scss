@@ -135,7 +135,7 @@ main{
 }
 .home{
   @include backgroundCover('../images/home-s.jpg');
-  background-color: #B46112;
+  background-color: #E6833C;
   align-items: flex-end;
   display: flex;
   height: 31rem;
@@ -162,7 +162,7 @@ main{
 .slider{
   @include backgroundCover('../images/productos-s.jpg');
   background-position: center bottom;
-  background-color: #F95A17;
+  background-color: #632801;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -251,7 +251,7 @@ main{
 }
 .recetas{
   @include backgroundCover('../images/recetas-s.jpg');
-  background-color: #451701;
+  background-color: #6A2000;
   flex-direction: column;
   padding: 2rem 1rem;
   text-align: center;
@@ -447,9 +447,6 @@ main{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
     min-height: calc(100vh - #{$altura-footer});
-    .bx-wrapper{
-      margin-top: 7rem;
-    }
   }
   .recetas{
     padding: 3rem 0 5rem;

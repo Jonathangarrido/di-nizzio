@@ -816,7 +816,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #B46112;
+  background-color: #E6833C;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -862,7 +862,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  background-color: #F95A17;
+  background-color: #632801;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -964,7 +964,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #451701;
+  background-color: #6A2000;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1186,8 +1186,6 @@ main {
     padding: 0;
     min-height: -webkit-calc(100vh - 3rem);
     min-height: calc(100vh - 3rem); }
-    .actividades .bx-wrapper {
-      margin-top: 7rem; }
   .recetas {
     padding: 3rem 0 5rem;
     background-image: url(../images/recetas.jpg);
