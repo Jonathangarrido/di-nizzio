@@ -239,7 +239,14 @@ main{
   .bx-viewport{
     max-width: calc(800px + 10rem)!important;
     height: 100%!important;
-    margin-top: 3rem;
+  }
+  li{
+    padding: 0 2rem;
+  }
+  .bx-controls-direction{
+    a{
+      width: 2rem;
+    }
   }
 }
 .recetas{
@@ -390,7 +397,7 @@ main{
   .home{
     align-items: center;
     display: flex;
-    height: calc(100vh - #{$altura-nav});
+    min-height: calc(100vh - #{$altura-nav});
     justify-content: flex-end;
     div{
       padding-right: 5rem;
@@ -430,7 +437,7 @@ main{
   .promocion{
     @include backgroundCover('../images/comercial.jpg');
     padding: 0;
-    height: 80vh;
+    min-height: 80vh;
     div{
       height: $btn-play-lg;
       width: $btn-play-lg;
@@ -439,14 +446,16 @@ main{
   .actividades{
     @include backgroundCover('../images/consejos.jpg');
     padding: 0;
-    height: calc(100vh - #{$altura-footer});
+    min-height: calc(100vh - #{$altura-footer});
+    .bx-wrapper{
+      margin-top: 7rem;
+    }
   }
   .recetas{
     padding: 3rem 0 5rem;
     @include backgroundCover('../images/recetas.jpg');
     &-item{
       width: 11.8rem;
-
     }
     h1{
       font-size: 4rem;
@@ -466,6 +475,16 @@ main{
     }
     h2{
       text-shadow: none;
+    }
+  }
+  .actividades{
+    li{
+      padding: 0;
+    }
+    .bx-controls-direction{
+      a{
+        width: 5rem;
+      }
     }
   }
 }

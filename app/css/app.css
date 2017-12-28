@@ -953,8 +953,11 @@ main {
   .actividades .bx-viewport {
     max-width: -webkit-calc(800px + 10rem) !important;
     max-width: calc(800px + 10rem) !important;
-    height: 100% !important;
-    margin-top: 3rem; }
+    height: 100% !important; }
+  .actividades li {
+    padding: 0 2rem; }
+  .actividades .bx-controls-direction a {
+    width: 2rem; }
 
 .recetas {
   background-image: url(../images/recetas-s.jpg);
@@ -1132,8 +1135,8 @@ main {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: -webkit-calc(100vh - 4rem);
-    height: calc(100vh - 4rem);
+    min-height: -webkit-calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -1171,7 +1174,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    height: 80vh; }
+    min-height: 80vh; }
     .promocion div {
       height: 7rem;
       width: 7rem; }
@@ -1181,8 +1184,10 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    height: -webkit-calc(100vh - 3rem);
-    height: calc(100vh - 3rem); }
+    min-height: -webkit-calc(100vh - 3rem);
+    min-height: calc(100vh - 3rem); }
+    .actividades .bx-wrapper {
+      margin-top: 7rem; }
   .recetas {
     padding: 3rem 0 5rem;
     background-image: url(../images/recetas.jpg);
@@ -1205,7 +1210,11 @@ main {
     .home h1 {
       text-shadow: none; }
     .home h2 {
-      text-shadow: none; } }
+      text-shadow: none; }
+  .actividades li {
+    padding: 0; }
+  .actividades .bx-controls-direction a {
+    width: 5rem; } }
 
 .especifico {
   -webkit-box-align: center;
