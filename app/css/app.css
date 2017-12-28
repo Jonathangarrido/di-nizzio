@@ -1323,9 +1323,8 @@ main {
       text-align: center;
       padding: 0 .2rem; }
   .producto-tabla tr:nth-child(1) td {
-    border-top: 2px #A32328 solid;
-    padding-bottom: .25rem; }
-  .producto-tabla tr:nth-child(2) td, .producto-tabla tr:nth-child(3) td, .producto-tabla tr:nth-child(4) td {
+    border-top: 2px #A32328 solid; }
+  .producto-tabla tr:not(:last-child) td {
     border-bottom: 2px #A32328 solid; }
 
 .producto-ficha {

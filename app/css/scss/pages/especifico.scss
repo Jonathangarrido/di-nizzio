@@ -102,15 +102,13 @@
       &:nth-child(1){
         td{
           border-top: 2px #A32328 solid;
-          padding-bottom: .25rem;
+          // padding-bottom: .25rem;
         }
       }
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4){
+      &:not(:last-child){
         td{
           border-bottom: 2px #A32328 solid;
-        }
+        }   
       }
     }
   }
