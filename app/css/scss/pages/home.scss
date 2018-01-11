@@ -288,6 +288,32 @@ main{
   }
   
 }
+.encuentranos{
+  background: navy;
+  padding: 3rem 2rem;
+  h1{
+    font-size: 2.5rem;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  li{
+    padding: 1rem;
+    text-align: center;
+  }
+
+  img{
+    max-width: 4.4rem;
+  }
+  p{
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
 .footer{
   align-items: center;
   background-color: #A32328;
@@ -354,6 +380,12 @@ main{
   .recetas{
     @include backgroundCover('../images/recetas.jpg');
     
+  }
+
+  .encuentranos{
+    img{
+      max-width: 7rem;
+    }
   }
 }
 
@@ -470,6 +502,11 @@ main{
   .footer{
     footer{
       justify-content: flex-end;
+    }
+  }
+  .encuentranos{
+    img{
+      max-width: 10rem;
     }
   }
 }
