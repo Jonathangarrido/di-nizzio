@@ -25,7 +25,7 @@ function miProductoCtrl(Consultas,$location,Analytics) {
   }
 
   function navSelect(){
-    $('nav a').hasClass('active', function(){
+    $('nav a').each(function(){
       $(this).removeClass('active');
     })
     $('nav a[data-menu="productos"]').addClass('active');
@@ -46,6 +46,10 @@ function miProductoCtrl(Consultas,$location,Analytics) {
     // vm.producto.ingredientes = filtroIngredientes;
 
     Analytics.trackEvent('Producto','Producto: '+vm.producto.titulo);
+  }
+
+  vm.descarga = function(){
+    Analytics.trackEvent('Producto','Descarga: '+vm.producto.titulo);
   }
 
 }

@@ -19,7 +19,7 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     
   }
   function navSelect(){
-    $('nav a').hasClass('active', function(){
+    $('nav a').each(function(){
       $(this).removeClass('active');
     })
     $('nav a[data-menu="recetas"]').addClass('active');
@@ -46,6 +46,10 @@ function miRecetaCtrl(Consultas,$location,Analytics) {
     vm.receta.ingredientes = filtroIngredientes;
 
     Analytics.trackEvent('Receta','Receta: '+vm.receta.titulo);
+  }
+
+  vm.descarga = function(){
+    Analytics.trackEvent('Receta','Descarga: '+vm.receta.titulo);
   }
 
 }

@@ -12,6 +12,7 @@
     <p><b>Preparación</b></p>
     <p ng-repeat="preparacion in $ctrl.receta.preparacion">{{preparacion}}</p>
     <div class="especifico-footer">
+      <a href="./images/descarga-recetas/{{$ctrl.receta.imagen}}.pdf" target="_blank"class="producto-ficha" ng-click="$ctrl.descarga()">Descargar Receta</a>
       <a ng-href="#!/">Volver</a>
     </div>
   </div>
